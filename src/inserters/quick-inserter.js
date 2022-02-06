@@ -43,11 +43,7 @@ export function QuickInserterPopover( props ) {
 
 	let shownIcons = icons.filter( ( icon ) => {
 		const curatedIcons = [
-			'wordpress-image',
-			'wordpress-shipping',
-			'wordpress-sparkles',
-			'wordpress-twitter',
-			'wordpress-verse',
+			'custom-shield-lock',
 		];
 
 		return curatedIcons.includes( icon.name );

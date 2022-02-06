@@ -251,27 +251,22 @@ import { commentEditLink, sparkles, shieldLock, unlock } from './wordpress/temp'
 
 
 
-const wpIcons = [
+const customIcons = [
 	{
-		name: 'sheild-lock',
+		name: 'shield-lock',
 		title: __( 'Shield Lock', 'icon-block' ),
 		icon: shieldLock,
 	},
 	
 ];
 
-// wpSocialIcons.forEach( ( icon ) => {
-// 	icon.name = 'wordpress-' + icon.name;
-// 	icon.type = 'wordpress';
-// } );
-
-wpIcons.forEach( ( icon ) => {
-	icon.name = 'wordpress-' + icon.name;
-	icon.type = 'wordpress';
+customIcons.forEach( ( icon ) => {
+	icon.name = 'custom-' + icon.name;
+	icon.type = 'custom';
 } );
 
 const iconsArray = [];
-const icons = iconsArray.concat( wpIcons );
+const icons = iconsArray.concat( customIcons );
 
 icons.sort( function ( a, b ) {
 	return a.name.localeCompare( b.name );

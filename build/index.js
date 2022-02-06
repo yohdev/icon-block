@@ -700,21 +700,17 @@ __webpack_require__.r(__webpack_exports__);
 // Temporary icon specifications that are not yet in the NPM package.
 
 
-const wpIcons = [{
-  name: 'sheild-lock',
+const customIcons = [{
+  name: 'shield-lock',
   title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Shield Lock', 'icon-block'),
   icon: _wordpress_temp__WEBPACK_IMPORTED_MODULE_1__.shieldLock
-}]; // wpSocialIcons.forEach( ( icon ) => {
-// 	icon.name = 'wordpress-' + icon.name;
-// 	icon.type = 'wordpress';
-// } );
-
-wpIcons.forEach(icon => {
-  icon.name = 'wordpress-' + icon.name;
-  icon.type = 'wordpress';
+}];
+customIcons.forEach(icon => {
+  icon.name = 'custom-' + icon.name;
+  icon.type = 'custom';
 });
 const iconsArray = [];
-const icons = iconsArray.concat(wpIcons);
+const icons = iconsArray.concat(customIcons);
 icons.sort(function (a, b) {
   return a.name.localeCompare(b.name);
 });
@@ -1236,7 +1232,7 @@ function QuickInserterPopover(props) {
     return icon.isDefault;
   });
   let shownIcons = _icons__WEBPACK_IMPORTED_MODULE_4__["default"].filter(icon => {
-    const curatedIcons = ['wordpress-image', 'wordpress-shipping', 'wordpress-sparkles', 'wordpress-twitter', 'wordpress-verse'];
+    const curatedIcons = ['custom-shield-lock'];
     return curatedIcons.includes(icon.name);
   });
 
